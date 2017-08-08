@@ -33,11 +33,11 @@ public final class UIDeviceComplete<Base> {
 public protocol UIDeviceCompleteCompatible {
     associatedtype CompatibleType
 
-    var dc: CompatibleType { get }
+    var device: CompatibleType { get }
 }
 
 public extension UIDeviceCompleteCompatible {
-    public var dc: UIDeviceComplete<Self> {
+    public var device: UIDeviceComplete<Self> {
         return UIDeviceComplete(self)
     }
 }
